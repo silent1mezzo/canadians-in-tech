@@ -1,0 +1,30 @@
+---
+import { getCollection } from 'astro:content';
+import Section from './Section.astro';
+import Card from './Card.astro';
+
+interface Props {
+	number: number
+}
+
+const { number } = Astro.props;
+
+const people = await getCollection('people');
+let randomPeople = people.sort(() => 0.5 - Math.random()).slice(0, number);
+---
+
+<Section>
+	<div class="flex justify-between pb-4">
+		<p class="text-xl font-bold">Random Canadians</p>
+		<a href="/posts" class="underline hover:text-orange-600">all people →</a>
+	</div>
+	<div class="flex flex-col pb-4 md:flex-row">
+		{
+			randomPeople.map((person: any) => (
+				<div class="mb-4 basis-1 last:mr-0 md:mr-4 md:basis-1/3">
+					<Card people={person} />
+				</div>
+			))
+		}
+	</div>
+</Section>

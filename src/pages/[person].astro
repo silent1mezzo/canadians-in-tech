@@ -1,0 +1,32 @@
+---
+import { type CollectionEntry, getCollection } from "astro:content";
+import PostHeader from '@/components/PostHeader.astro';
+import PostContent from '@/components/PostContent.astro';
+import Base from '@/layouts/Base.astro';
+
+export interface Props {
+  person: CollectionEntry<"people">;
+}
+
+export async function getStaticPaths() {
+  const peopleEntries = await getCollection("people");
+  return peopleEntries.map(person => ({
+    params: { person: person.slug }, props: { person },
+  }));
+}
+
+const { person } = Astro.props;
+const { Content } = await person.render();
+---
+
+<Base head={{ title: person.data.name, description: person.data.description }}>
+	<div class="mx-auto w-full max-w-screen-md">
+		<PostHeader
+			name={person.data.name}
+			company={person.data.company}
+		/>
+		<PostContent>
+			<Content />
+		</PostContent>
+	</div>
+</Base>

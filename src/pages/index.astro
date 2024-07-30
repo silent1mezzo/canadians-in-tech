@@ -1,0 +1,14 @@
+---
+import { AppConfig } from '@/utils/AppConfig';
+import Base from '@/layouts/Base.astro';
+import Hero from '@/components/Hero.astro';
+import LatestPeople from '@/components/LatestPeople.astro';
+
+const { title } = AppConfig;
+const { description } = AppConfig;
+---
+
+<Base head={{ title, description }}>
+	<Hero />
+	<LatestPeople number={5} />
+</Base>

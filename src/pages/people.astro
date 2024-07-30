@@ -1,0 +1,26 @@
+---
+import { getCollection } from "astro:content";
+import { AppConfig } from '@/utils/AppConfig';
+import Base from '@/layouts/Base.astro';
+import Section from '@/components/Section.astro';
+import Card from '@/components/Card.astro';
+import Heading from '@/components/Heading.astro';
+
+const { title } = AppConfig;
+const { description } = AppConfig;
+
+const people = await getCollection("people");
+---
+
+<Base head={{ title, description }}>
+	<Section><Heading title="People" /></Section>
+	<Section>
+		{
+			people.map((person: any) => (
+				<div class="mb-4 basis-1 last:mb-0">
+					<Card people={person} />
+				</div>
+			))
+		}
+	</Section>
+</Base>
