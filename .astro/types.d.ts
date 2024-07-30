@@ -133,6 +133,13 @@ declare module 'astro:content' {
   collection: "people";
   data: InferEntrySchema<"people">
 } & { render(): Render[".md"] };
+"tobias-lutke.md": {
+	id: "tobias-lutke.md";
+  slug: "tobias-lutke";
+  body: string;
+  collection: "people";
+  data: InferEntrySchema<"people">
+} & { render(): Render[".md"] };
 };
 
 	};

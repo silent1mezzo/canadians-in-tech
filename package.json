@@ -7,7 +7,8 @@
 		"start": "astro dev",
 		"build": "astro check && astro build",
 		"preview": "astro preview",
-		"astro": "astro"
+		"astro": "astro",
+		"create-author": "node ./scripts/create.cjs"
 	},
 	"dependencies": {
 		"@astrojs/check": "^0.8.0",
@@ -29,6 +30,8 @@
 	},
 	"devDependencies": {
 		"@tailwindcss/typography": "^0.5.10",
+		"dedent": "^1.5.3",
+		"inquirer": "^8.2.6",
 		"prettier": "^3.1.1",
 		"prettier-plugin-astro": "^0.14.0",
 		"prettier-plugin-tailwindcss": "^0.6.0"
