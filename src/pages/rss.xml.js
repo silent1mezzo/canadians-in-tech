@@ -1,14 +1,20 @@
-import rss, {pagesGlobToRssItems} from '@astrojs/rss';
+import rss from '@astrojs/rss';
+import { getCollection } from 'astro:content';
+import { AppConfig } from '@/utils/AppConfig';
+
+const { title } = AppConfig;
+const { description } = AppConfig;
 
 export async function GET(context) {
+  const people = await getCollection('people');
   return rss({
-    title: 'nicdun.dev - blog',
-    description: 'Crafting the Digital Future with Web Development Wonders',
+    title,
+    description,
     site: context.site,
-    items: await pagesGlobToRssItems(
-      import.meta.glob('./posts/*.{md,mdx}'),
-    ),
-    stylesheet: './rss/styles.xsl',
-    customData: `<language>en-us</language>`,
+    items: people.map((person) => ({
+      title: person.data.name,
+      description: person.data.description,
+      pubDate: Date()
+    })),
   });
 }
