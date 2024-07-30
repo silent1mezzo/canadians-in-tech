@@ -8,7 +8,7 @@
 		"build": "astro check && astro build",
 		"preview": "astro preview",
 		"astro": "astro",
-		"create-author": "node ./scripts/create.cjs"
+		"add-person": "node ./scripts/create.cjs"
 	},
 	"dependencies": {
 		"@astrojs/check": "^0.8.0",
