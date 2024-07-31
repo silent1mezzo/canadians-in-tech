@@ -7,14 +7,38 @@ export interface Props {
 }
 
 const { person } = Astro.props;
-
 ---
 
 <Section>
 	<div class="flex flex-col items-center">
 		<p class="px-14 pb-4 pt-6 text-center text-4xl font-bold">{person.data.name}</p>
-		<div class="text-sm">
-			<span><a href={person.data.company_site} target="_blank">{person.data.company}</a></span>
+		<div class="pb-4">
+			{person.data.description}
+		</div>
+		<div class="text-xs">
+			<span>
+				<a href={person.data.company_site} target="_blank">{person.data.company}</a> 
+				{ person.data.personal_site && 
+					<>
+						| <a href={person.data.personal_site} target="_blank">{person.data.personal_site}</a> 
+					<>
+				}
+				{ person.data.linkedin && 
+					<>
+						| <a href={person.data.linkedin} target="_blank">LinkedIn</a> 
+					<>
+				}
+				{ person.data.twitter && 
+					<>
+						| <a href={person.data.twitter} target="_blank">Twitter</a> 
+					<>
+				}
+				{ person.data.github && 
+					<>
+						| <a href={person.data.github} target="_blank">Github</a> 
+					<>
+				}
+			</span>
 		</div>
 	</div>
 </Section>
