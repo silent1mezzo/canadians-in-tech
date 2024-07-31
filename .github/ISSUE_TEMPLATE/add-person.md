@@ -1,5 +1,5 @@
 ---
-name: Add <name>
+name: Add Person
 about: A request to add a person to https://canadiansin.tech
 title: ''
 labels: ''
