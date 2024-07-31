@@ -133,9 +133,30 @@ declare module 'astro:content' {
   collection: "people";
   data: InferEntrySchema<"people">
 } & { render(): Render[".md"] };
+"chris-best.md": {
+	id: "chris-best.md";
+  slug: "chris-best";
+  body: string;
+  collection: "people";
+  data: InferEntrySchema<"people">
+} & { render(): Render[".md"] };
 "garrett-camp.md": {
 	id: "garrett-camp.md";
   slug: "garrett-camp";
+  body: string;
+  collection: "people";
+  data: InferEntrySchema<"people">
+} & { render(): Render[".md"] };
+"janet-bannister.md": {
+	id: "janet-bannister.md";
+  slug: "janet-bannister";
+  body: string;
+  collection: "people";
+  data: InferEntrySchema<"people">
+} & { render(): Render[".md"] };
+"matei-zaharia.md": {
+	id: "matei-zaharia.md";
+  slug: "matei-zaharia";
   body: string;
   collection: "people";
   data: InferEntrySchema<"people">

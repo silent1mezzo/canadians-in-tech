@@ -7,10 +7,10 @@ const root = process.cwd()
 
 const genFrontMatter = (answers) => {
   const personal_site = answers.personal_site ? `person_site: "${answers.personal_site}"` : ''
-  const company_site = answers.company_site ? `person_site: "${answers.company_site}"` : ''
-  const twitter = answers.twitter ? `person_site: "${answers.twitter}"` : ''
-  const linkedin = answers.linkedin ? `person_site: "${answers.linkedin}"` : ''
-  const github = answers.github ? `person_site: "${answers.github}"` : ''
+  const company_site = answers.company_site ? `company_site: "${answers.company_site}"` : ''
+  const twitter = answers.twitter ? `twitter: "${answers.twitter}"` : ''
+  const linkedin = answers.linkedin ? `linkedin: "${answers.linkedin}"` : ''
+  const github = answers.github ? `github: "${answers.github}"` : ''
 
   let frontMatter = dedent`---
   name: "${answers.name}"
