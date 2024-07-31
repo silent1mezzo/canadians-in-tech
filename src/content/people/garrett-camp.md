@@ -1,7 +1,7 @@
 ---
 name: "Garrett Camp"
 description: "Entrepreneur, Product / systems designer, producer. founder @ Expa, Uber, Aero, Mix."
-person_site: "https://www.garrettcamp.com/"
+personal_site: "https://www.garrettcamp.com/"
 company: "Expa"
 company_site: "https://www.expa.com/"
 twitter: "https://x.com/gc"

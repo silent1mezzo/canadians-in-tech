@@ -6,7 +6,7 @@ const dedent = require('dedent')
 const root = process.cwd()
 
 const genFrontMatter = (answers) => {
-  const personal_site = answers.personal_site ? `person_site: "${answers.personal_site}"` : ''
+  const personal_site = answers.personal_site ? `personal_site: "${answers.personal_site}"` : ''
   const company_site = answers.company_site ? `company_site: "${answers.company_site}"` : ''
   const twitter = answers.twitter ? `twitter: "${answers.twitter}"` : ''
   const linkedin = answers.linkedin ? `linkedin: "${answers.linkedin}"` : ''

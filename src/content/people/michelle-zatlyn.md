@@ -1,7 +1,7 @@
 ---
 name: "Michelle Zatlyn"
 description: "Young Global Leader '14. Co-founder, President + COO Cloudflare"
-person_site: "https://en.wikipedia.org/wiki/Michelle_Zatlyn"
+personal_site: "https://en.wikipedia.org/wiki/Michelle_Zatlyn"
 company: "Cloudflare"
 company_site: "https://www.cloudflare.com/"
 twitter: "https://x.com/zatlyn"
