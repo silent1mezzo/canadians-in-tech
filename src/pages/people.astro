@@ -18,7 +18,7 @@ const people = await getCollection("people");
 		{
 			people.map((person: any) => (
 				<div class="mb-4 basis-1 last:mb-0">
-					<Card people={person} />
+					<Card person={person} />
 				</div>
 			))
 		}

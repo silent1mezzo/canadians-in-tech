@@ -22,7 +22,7 @@ let randomPeople = people.sort(() => 0.5 - Math.random()).slice(0, number);
 		{
 			randomPeople.map((person: any) => (
 				<div class="mb-4 basis-1 last:mr-0 md:mr-4 md:basis-1/3">
-					<Card people={person} />
+					<Card person={person} />
 				</div>
 			))
 		}

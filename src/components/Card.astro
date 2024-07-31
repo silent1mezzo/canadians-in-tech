@@ -2,13 +2,13 @@
 import { type CollectionEntry } from "astro:content";
 
 export interface Props {
-  people: CollectionEntry<"people">;
+  person: CollectionEntry<"people">;
 }
 
-const { people } = Astro.props;
+const { person } = Astro.props;
 ---
 
-<a href={people.slug}>
+<a href={person.slug}>
 	<div
 		class="h-full rounded-2xl bg-stone-200/50 from-orange-900 via-amber-700 to-white p-[1px] text-sm shadow-[inset_0_0_0_1px_rgba(255,255,255,0.4)] hover:bg-gradient-to-r dark:bg-gray-900"
 	>
@@ -25,9 +25,9 @@ const { people } = Astro.props;
 		>
 			<div class="flex-auto">
 				<div class="flex justify-between pb-4 text-xs">
-					<p>{people.data.company}</p>
+					<p>{person.data.company}</p>
 				</div>
-				<p class="pb-4 text-lg font-bold">{people.data.name}</p>
+				<p class="pb-4 text-lg font-bold">{person.data.name}</p>
 			</div>
 			<p class="pt-4 underline">learn more →</p>
 		</div>

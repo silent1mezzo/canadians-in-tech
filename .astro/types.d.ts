@@ -133,9 +133,23 @@ declare module 'astro:content' {
   collection: "people";
   data: InferEntrySchema<"people">
 } & { render(): Render[".md"] };
+"ben-vinegar.md": {
+	id: "ben-vinegar.md";
+  slug: "ben-vinegar";
+  body: string;
+  collection: "people";
+  data: InferEntrySchema<"people">
+} & { render(): Render[".md"] };
 "chris-best.md": {
 	id: "chris-best.md";
   slug: "chris-best";
+  body: string;
+  collection: "people";
+  data: InferEntrySchema<"people">
+} & { render(): Render[".md"] };
+"farhan-thawar.md": {
+	id: "farhan-thawar.md";
+  slug: "farhan-thawar";
   body: string;
   collection: "people";
   data: InferEntrySchema<"people">

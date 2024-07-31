@@ -22,8 +22,7 @@ const { Content } = await person.render();
 <Base head={{ title: person.data.name, description: person.data.description }}>
 	<div class="mx-auto w-full max-w-screen-md">
 		<PostHeader
-			name={person.data.name}
-			company={person.data.company}
+			person={person}
 		/>
 		<PostContent>
 			<Content />

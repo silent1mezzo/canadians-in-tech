@@ -1,20 +1,20 @@
 ---
+import { type CollectionEntry } from "astro:content";
 import Section from './Section.astro';
 
-interface Props {
-	name: string;
-	company?: string;
+export interface Props {
+  person: CollectionEntry<"people">;
 }
 
-const { name, company } = Astro.props;
+const { person } = Astro.props;
 
 ---
 
 <Section>
 	<div class="flex flex-col items-center">
-		<p class="px-14 pb-4 pt-6 text-center text-4xl font-bold">{name}</p>
+		<p class="px-14 pb-4 pt-6 text-center text-4xl font-bold">{person.data.name}</p>
 		<div class="text-sm">
-			<span>{company}</span>
+			<span><a href={person.data.company_site} target="_blank">{person.data.company}</a></span>
 		</div>
 	</div>
 </Section>
