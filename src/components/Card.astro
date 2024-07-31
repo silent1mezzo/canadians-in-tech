@@ -8,7 +8,7 @@ export interface Props {
 const { person } = Astro.props;
 ---
 
-<a href={person.slug}>
+<a href={`/${person.slug}`}>
 	<div
 		class="h-full rounded-2xl bg-stone-200/50 from-orange-900 via-amber-700 to-white p-[1px] text-sm shadow-[inset_0_0_0_1px_rgba(255,255,255,0.4)] hover:bg-gradient-to-r dark:bg-gray-900"
 	>
