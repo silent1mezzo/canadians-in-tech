@@ -1,5 +1,4 @@
 ---
-import { SEO } from "astro-seo";
 import Footer from '@/components/Footer.astro';
 import Navbar from '@/components/Navbar.astro';
 import { AppConfig } from '@/utils/AppConfig';
@@ -14,20 +13,34 @@ export interface Props {
 const {
 	head: { title, description }
 } = Astro.props as Props;
+
+const canonicalURL = Astro.url
 ---
 
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>{title}</title>
-		<meta name="description" content={description} />
-		<meta name="author" content={AppConfig.author} />
-
-		<link rel="sitemap" href="/sitemap-index.xml" />
 		<link rel="alternate" type="application/rss+xml" href="/rss.xml" />
 		<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🇨🇦</text></svg>">
 
+		<!-- General Meta Tags -->
+		<title>{title}</title>
+		<meta name="title" content={title} />
+		<meta name="description" content={description} />
+		<meta name="author" content={AppConfig.author} />
+		<link rel="sitemap" href="/sitemap-index.xml" />
+	
+		<!-- Open Graph / Facebook -->
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:url" content={canonicalURL} />
+	
+		<!-- Twitter -->
+		<meta property="twitter:card" content="summary_large_image" />
+		<meta property="twitter:url" content={canonicalURL} />
+		<meta property="twitter:title" content={title} />
+		<meta property="twitter:description" content={description} />
 		<script>
 			if (
 				localStorage.getItem('dark-mode') === 'true' ||
@@ -41,13 +54,7 @@ const {
 				document.querySelector('html')?.classList.remove('dark');
 			}
 		</script>
-		<SEO
-			title={title}
-			description={description}
-			twitter={{
-				creator: "@adammckerlie"
-			}}
-		/>
+		
 	</head>
 	<body
 		class="flex min-h-screen flex-col bg-stone-100 font-mono text-gray-950 dark:bg-stone-900 dark:text-white"

@@ -3,6 +3,7 @@ import { type CollectionEntry, getCollection } from "astro:content";
 import PostHeader from '@/components/PostHeader.astro';
 import PostContent from '@/components/PostContent.astro';
 import Base from '@/layouts/Base.astro';
+import { AppConfig } from '@/utils/AppConfig';
 
 export interface Props {
   person: CollectionEntry<"people">;
@@ -17,9 +18,10 @@ export async function getStaticPaths() {
 
 const { person } = Astro.props;
 const { Content } = await person.render();
+const { title } = AppConfig;
 ---
 
-<Base head={{ title: person.data.name, description: person.data.description }}>
+<Base head={{ title: `${person.data.name} | ${title}`, description: person.data.description }}>
 	<div class="mx-auto w-full max-w-screen-md">
 		<PostHeader
 			person={person}
