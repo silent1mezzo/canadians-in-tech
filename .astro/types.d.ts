@@ -126,6 +126,13 @@ declare module 'astro:content' {
 
 	type ContentEntryMap = {
 		"people": {
+"andrej-karpathy.md": {
+	id: "andrej-karpathy.md";
+  slug: "andrej-karpathy";
+  body: string;
+  collection: "people";
+  data: InferEntrySchema<"people">
+} & { render(): Render[".md"] };
 "apoorva-mehta.md": {
 	id: "apoorva-mehta.md";
   slug: "apoorva-mehta";
@@ -161,6 +168,13 @@ declare module 'astro:content' {
   collection: "people";
   data: InferEntrySchema<"people">
 } & { render(): Render[".md"] };
+"ivan-zhang.md": {
+	id: "ivan-zhang.md";
+  slug: "ivan-zhang";
+  body: string;
+  collection: "people";
+  data: InferEntrySchema<"people">
+} & { render(): Render[".md"] };
 "janet-bannister.md": {
 	id: "janet-bannister.md";
   slug: "janet-bannister";
@@ -178,6 +192,13 @@ declare module 'astro:content' {
 "michelle-zatlyn.md": {
 	id: "michelle-zatlyn.md";
   slug: "michelle-zatlyn";
+  body: string;
+  collection: "people";
+  data: InferEntrySchema<"people">
+} & { render(): Render[".md"] };
+"raquel-urtasun.md": {
+	id: "raquel-urtasun.md";
+  slug: "raquel-urtasun";
   body: string;
   collection: "people";
   data: InferEntrySchema<"people">
