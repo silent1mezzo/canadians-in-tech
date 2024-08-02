@@ -133,6 +133,13 @@ declare module 'astro:content' {
   collection: "people";
   data: InferEntrySchema<"people">
 } & { render(): Render[".md"] };
+"anne-steptoe.md": {
+	id: "anne-steptoe.md";
+  slug: "anne-steptoe";
+  body: string;
+  collection: "people";
+  data: InferEntrySchema<"people">
+} & { render(): Render[".md"] };
 "apoorva-mehta.md": {
 	id: "apoorva-mehta.md";
   slug: "apoorva-mehta";
@@ -150,6 +157,20 @@ declare module 'astro:content' {
 "chris-best.md": {
 	id: "chris-best.md";
   slug: "chris-best";
+  body: string;
+  collection: "people";
+  data: InferEntrySchema<"people">
+} & { render(): Render[".md"] };
+"dileshni-jayasinghe.md": {
+	id: "dileshni-jayasinghe.md";
+  slug: "dileshni-jayasinghe";
+  body: string;
+  collection: "people";
+  data: InferEntrySchema<"people">
+} & { render(): Render[".md"] };
+"dominique-simoneauritchie.md": {
+	id: "dominique-simoneauritchie.md";
+  slug: "dominique-simoneauritchie";
   body: string;
   collection: "people";
   data: InferEntrySchema<"people">
@@ -178,6 +199,13 @@ declare module 'astro:content' {
 "janet-bannister.md": {
 	id: "janet-bannister.md";
   slug: "janet-bannister";
+  body: string;
+  collection: "people";
+  data: InferEntrySchema<"people">
+} & { render(): Render[".md"] };
+"margaret-leibovic.md": {
+	id: "margaret-leibovic.md";
+  slug: "margaret-leibovic";
   body: string;
   collection: "people";
   data: InferEntrySchema<"people">
