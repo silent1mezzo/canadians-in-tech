@@ -217,6 +217,13 @@ declare module 'astro:content' {
   collection: "people";
   data: InferEntrySchema<"people">
 } & { render(): Render[".md"] };
+"matt-whetham.md": {
+	id: "matt-whetham.md";
+  slug: "matt-whetham";
+  body: string;
+  collection: "people";
+  data: InferEntrySchema<"people">
+} & { render(): Render[".md"] };
 "michelle-zatlyn.md": {
 	id: "michelle-zatlyn.md";
   slug: "michelle-zatlyn";
@@ -255,5 +262,5 @@ declare module 'astro:content' {
 
 	type AnyEntryMap = ContentEntryMap & DataEntryMap;
 
-	export type ContentConfig = typeof import("../src/content/config.js");
+	export type ContentConfig = typeof import("./../src/content/config.js");
 }
