@@ -3,6 +3,7 @@ import { AppConfig } from '@/utils/AppConfig';
 import Base from '@/layouts/Base.astro';
 import Hero from '@/components/Hero.astro';
 import LatestPeople from '@/components/LatestPeople.astro';
+import Section from '@/components/Section.astro';
 
 const { title } = AppConfig;
 const { description } = AppConfig;
@@ -11,4 +12,15 @@ const { description } = AppConfig;
 <Base head={{ title, description }}>
 	<Hero />
 	<LatestPeople number={5} />
+	<Section>
+		<div class="container py-10 px-10 mx-0 min-w-full flex flex-col items-center">
+			<div class="mr-3 h-18 w-48 rounded-xl bg-stone-200/50 from-orange-900 via-amber-700 to-white p-[1px] shadow-[inset_0_0_0_1px_rgba(255,255,255,0.4)] hover:bg-gradient-to-r">
+				<a
+					href="/suggest"
+					class="flex h-full w-full items-center justify-center rounded-[0.7rem] bg-stone-300 p-4 text-gray-900 opacity-90 dark:bg-stone-800 dark:text-white">
+					Suggest Someone!
+				</a>
+			</div>
+		</div>
+	</Section>
 </Base>
