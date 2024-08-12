@@ -7,14 +7,6 @@ import Heading from '@/components/Heading.astro';
 const { title } = AppConfig;
 const { description } = AppConfig;
 ---
-		name: z.string(),
-        description: z.string().optional(),
-        personal_site: z.string().url().optional(),
-		company: z.string().optional(),
-        company_site: z.string().url().optional(),
-        twitter: z.string().url().optional(),
-        linkedin: z.string().url().optional(),
-        github: z.string().url().optional(),
 <Base head={{ title, description }}>
 	<Section><Heading title="Suggest someone to add" /></Section>
 	<Section>
@@ -90,6 +82,7 @@ const { description } = AppConfig;
 </Base>
 
 <script>
+    // @ts-nocheck
     function processPersonRequest() {
         //Fetch all of the data
         const name = document.getElementById('name')?.value;
